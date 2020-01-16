@@ -36,3 +36,5 @@ group :development do
 end
 
 gem "fast_jsonapi", "~> 1.5"
+
+gem "will_paginate", "~> 3.2"
