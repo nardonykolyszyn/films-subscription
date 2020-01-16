@@ -21,3 +21,5 @@ SEASON_TITLES.each do |season_title|
   season = Films::Season.new(film: film, number: 1)
   season.save!
 end
+
+User.create(email: 'customer@mail.com')
