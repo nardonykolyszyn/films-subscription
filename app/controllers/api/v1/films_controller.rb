@@ -10,16 +10,16 @@ module Api
       private
 
       def load_current_resource
-        return { movies: load_collection(MovieSerializer, Films::Movie.all) } if is_movie_resource?
+        return { movies: load_collection(MovieSerializer, Films::Movie.all.order(:created_at)) } if is_movie_resource?
 
-        { seasons: load_collection(SeasonSerializer, Films::Season.all) }
+        { seasons: load_collection(SeasonSerializer, Films::Season.all.order(:created_at)) }
       end
 
       def load_nested_resources
         {
           films: [
-            { movies: load_collection(MovieSerializer, Films::Movie.all) },
-            { seasons: load_collection(SeasonSerializer, Films::Season.all) }
+            { movies: load_collection(MovieSerializer, Films::Movie.all.order(:created_at)) },
+            { seasons: load_collection(SeasonSerializer, Films::Season.all.order(:created_at)) }
           ]
         }
       end
