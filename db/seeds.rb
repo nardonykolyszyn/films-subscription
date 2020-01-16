@@ -12,6 +12,7 @@ SEASON_TITLES = [
 
 MOVIE_TITLES.each do |movie_title|
   film = Film.new(title: movie_title, plot: rand(80..140))
+  3.times { film.purchase_options.build(price: rand(5..20).to_f, video_quality: rand(0..1)) }
   movie = Films::Movie.new(film: film)
   movie.save!
 end
