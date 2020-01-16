@@ -5,6 +5,7 @@ class CreateEpisodes < ActiveRecord::Migration[6.0]
     create_table :episodes do |t|
       t.string :title
       t.integer :plot
+      t.integer :sequence_number
       t.belongs_to :season, null: false, foreign_key: { on_delete: :cascade }, index: true
 
       t.timestamps

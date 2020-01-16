@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2020_01_16_021119) do
   create_table "episodes", force: :cascade do |t|
     t.string "title"
     t.integer "plot"
+    t.integer "sequence_number"
     t.bigint "season_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
