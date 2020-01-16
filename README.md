@@ -60,5 +60,9 @@ It will return Seasons only
 ### Library
 
 ~~~
-  HTTP GET /api/v1/library
+  HTTP GET /api/v1/library?user_id=1
 ~~~
+
+It will return current library for User with ID 1
+
+PS: Current Library only takes purchases that haven't expired yet.
