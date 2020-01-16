@@ -8,7 +8,7 @@ module Api
         return not_found if user.nil?
 
         render json: {
-          library: load_collection(LibrarySerializer, user.current_library)
+          library: load_collection(LibrarySerializer, user.current_library.order(:expires_at))
         }, status: :ok
       end
 
