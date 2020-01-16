@@ -1,24 +1,15 @@
-# README
+# Films subscription platform
+-----------------------------
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In this README I explain the general concept proof that I tried to implement.
 
-Things you may want to cover:
 
-* Ruby version
+## Approaches
 
-* System dependencies
+1. fast_jsonapi VS AMS
 
-* Configuration
+This gem is ridiculous faster than traditional implementation with AMS (See: https://medium.com/@raj.b.stretz/active-model-serializer-vs-fast-json-api-serializer-8338b939f01f), it's also designed to support multiple instrumentations, and different JSON resolvers making serializer a lot flexible.
 
-* Database creation
+2. Build API instead of using --api-only flag.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+I wanted to show you than even by executing this special flag, there still are unnecesary things we should take off in case you're building an API only with Rails, specially cutting down the amount of default frameworks Rails takes at setting-up the project.
