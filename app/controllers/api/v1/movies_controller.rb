@@ -6,7 +6,7 @@ module Api
       def index
         movies = Films::Movie.all
         render json: {
-          movies: MovieSerializer.new(movies)
+          movies: load_collection(MovieSerializer, movies)
         }, status: :ok
       end
     end

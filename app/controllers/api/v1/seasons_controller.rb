@@ -6,7 +6,7 @@ module Api
       def index
         seasons = Films::Season.all
         render json: {
-          seasons: SeasonSerializer.new(seasons)
+          seasons: load_collection(SeasonSerializer, seasons)
         }, status: :ok
       end
     end

@@ -13,8 +13,8 @@ module Api
 
       private
 
-      def load_collection(query)
-        ActiveModelSerializers::SerializableResource.new(query)
+      def load_collection(serializer, query)
+        serializer.new(query)
       end
 
       # It retrieve any resource by ID.
