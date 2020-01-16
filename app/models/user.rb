@@ -7,6 +7,6 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
   ## Instance methods
   def current_library
-    purchases.where('expires_at < (?)', Time.current)
+    purchases.where('expires_at > (?)', DateTime.now)
   end
 end
