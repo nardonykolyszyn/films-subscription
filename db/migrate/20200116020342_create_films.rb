@@ -5,6 +5,7 @@ class CreateFilms < ActiveRecord::Migration[6.0]
     create_table :films do |t|
       t.string :title
       t.integer :plot
+      t.date :expires_at
 
       t.timestamps
     end
