@@ -5,4 +5,6 @@ class Film < ApplicationRecord
   validates :title, :plot, presence: true
   ## Associations
   has_many :purchase_options
+  has_one  :movie
+  has_one  :season
 end
