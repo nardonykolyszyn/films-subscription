@@ -7,7 +7,7 @@ This README.md contains information about my approach to solve this challenge, i
 
 1. fast_jsonapi VS AMS
 
-This gem is ridiculous faster than traditional implementation with AMS (See: https://medium.com/@raj.b.stretz/active-model-serializer-vs-fast-json-api-serializer-8338b939f01f), it's also designed to support multiple instrumentations, and different JSON resolvers making serializer a lot flexible.
+This gem is ridiculous faster than traditional implementation with AMS (See: https://medium.com/@raj.b.stretz/active-model-serializer-vs-fast-json-api-serializer-8338b939f01f), it's also designed to support multiple instrumentations, and different JSON resolvers making serializer a lot flexible. Aditionally it exposes too much more information that allow to identify resources.
 
 2. Build API instead of using --api-only flag.
 
