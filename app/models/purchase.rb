@@ -9,7 +9,7 @@ class Purchase < ApplicationRecord
   validate :unique_purchase_option
 
   def unique_purchase_option
-    existing_purchase = user.purchases
+    existing_purchase = user.current_library
                             .where(purchase_option_id: purchase_option.id).any?
     errors.add(:purchase_option, 'You have already bought this film.') if existing_purchase
   end

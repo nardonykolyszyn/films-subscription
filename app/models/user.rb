@@ -5,4 +5,8 @@ class User < ApplicationRecord
   has_many :purchases
   ## Validations
   validates :email, uniqueness: true
+  ## Instance methods
+  def current_library
+    purchases.where('expires_at < (?)', Time.current)
+  end
 end

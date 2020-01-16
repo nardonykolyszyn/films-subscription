@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class Film < ApplicationRecord
+  ## Type of films.
+  TYPES = %w[movie season].freeze
   ## Validations
   validates :title, :plot, presence: true
   ## Associations

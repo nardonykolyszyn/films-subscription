@@ -5,5 +5,12 @@ class MovieSerializer
   attribute :purchase_options do |obj|
     obj.film.purchase_options
   end
-  belongs_to :film
+
+  attribute :title do |obj|
+    obj.film.title
+  end
+
+  attribute :plot do |obj|
+    obj.film.plot
+  end
 end
